@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 
-export default class vehiculos extends Component {
+export default class Vehiculos extends Component {
   render() {
     return (
       <div>

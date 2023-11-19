@@ -1,10 +1,10 @@
 import React, { Component } from 'react'
 
-export default class costos extends Component {
+export default class Dias extends Component {
   render() {
     return (
       <div>
-        costos
+        dias
       </div>
     )
   }

@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 
-export default class renta extends Component {
+export default class Renta extends Component {
   render() {
     return (
       <div>
