@@ -8,18 +8,18 @@ export default class Vehiculos extends Component {
 
     this.state = {
       vehiculos:[
-        {id:1, marca:'Toyota', tipo:'SUV', costo:'350Bs.'},
-        {id:2 , marca:'Toyota', tipo:'Sedan', costo:'200 Bs.'},
-        {id:3 , marca:'Honda', tipo:'Deportivo', costo:'400Bs.'},
-        {id:4 , marca:'Honda', tipo:'SUV', costo:'350Bs.'},
-        {id:5 , marca:'Suzuki', tipo:'SUV', costo:'350Bs.'},
-        {id:6 , marca:'Suzuki', tipo:'Sedan', costo:'200Bs.'},
-        {id:7 , marca:'Mitsubishi', tipo:'Deportivo', costo:'400Bs.'},
-        {id:8, marca:'Audi', tipo:'Lujo', costo:'700Bs.'},
-        {id:9 , marca:'Nissan', tipo:'Sedan', costo:'200Bs.'},
-        {id:10 , marca:'Nissan', tipo:'SUV', costo:'350Bs.'},
-        {id:11 , marca:'JEEP', tipo:'Todo Terreno', costo:'500 Bs.'},
-        {id:12 , marca:'JEEP', tipo:'Todo Terreno', costo:'500 Bs.'},
+        {id:1, marca:'Toyota', modelo:'Rav4', tipo:'SUV', costo:'350Bs.', foto:'images/Rav4.png'},
+        {id:2 , marca:'Toyota', modelo:'Corolla', tipo:'Sedan', costo:'200 Bs.', foto:'images/Corolla.png'},
+        {id:3 , marca:'Honda', modelo:'Civic', tipo:'Deportivo', costo:'400Bs.', foto:'images/Civic.png'},
+        {id:4 , marca:'Honda', modelo:'HRV', tipo:'SUV', costo:'350Bs.', foto:'images/HRV.png'},
+        {id:5 , marca:'Suzuki', modelo:'Grand Vitara', tipo:'SUV', costo:'350Bs.', foto:'images/Grand Vitara.png'},
+        {id:6 , marca:'Suzuki', modelo:'SX4', tipo:'Sedan', costo:'200Bs.', foto:'images/SX4.png'},
+        {id:7 , marca:'Mitsubishi', modelo:'ASX', tipo:'SUV', costo:'350.', foto:'images/ASX.png'},
+        {id:8, marca:'Audi', modelo:'R8', tipo:'Lujo', costo:'700Bs.', foto:'images/R8.png'},
+        {id:9 , marca:'Nissan', modelo:'Versa', tipo:'Sedan', costo:'200Bs.', foto:'images/Versa.png'},
+        {id:10 , marca:'Nissan', modelo:'Kicks', tipo:'SUV', costo:'350Bs.', foto:'images/Kicks.png'},
+        {id:11 , marca:'JEEP', modelo:'Wrangler', tipo:'Todo Terreno', costo:'500 Bs.', foto:'images/Wrangler.png'},
+        {id:12 , marca:'JEEP', modelo:'Renegade', tipo:'Todo Terreno', costo:'500 Bs.', foto:'images/Renegade.png'},
       ],
     };
   }
@@ -30,13 +30,15 @@ export default class Vehiculos extends Component {
           <div class="contenedor-vehiculos">
             {this.state.vehiculos.map(vehiculo => (
                 <div key={vehiculo.id} className="card">
-                <div className="textos">
-                  <h3>Datos del vehículo</h3>
-                  <p>Marca: {vehiculo.marca}</p>
-                  <p>Tipo: {vehiculo.tipo}</p>
-                  <p>Costo: {vehiculo.costo}</p>
+                  <img src={vehiculo.foto} alt={`${vehiculo.marca} ${vehiculo.modelo}`} className='foto-vehiculo' />
+                  <div className="textos">
+                    <h3>Datos del vehículo</h3>
+                    <p>Marca: {vehiculo.marca}</p>
+                    <p>Modelo: {vehiculo.modelo}</p>
+                    <p>Tipo: {vehiculo.tipo}</p>
+                    <p>Costo: {vehiculo.costo}</p>
+                  </div>
                 </div>
-              </div>
             ))}
           </div>
 
